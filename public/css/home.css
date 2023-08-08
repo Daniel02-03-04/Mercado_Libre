@@ -1,0 +1,81 @@
+html,
+body{
+    margin: 0;
+    box-shadow: 0px 0px 10px #646464;
+    font-family: "Roboto";
+    font-size: 12px;
+}
+
+header{
+    background-color: #eac926;
+    padding: 12px;
+}
+
+.logo {
+    width: 50%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#ml-main-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#ml-main-nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.burger-menu{
+    text-align: center;
+    font-size: 24px;
+    width: 28px;
+    padding: 8px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #0000ff;
+}
+
+.fa-bars{
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    width: 80%;
+    align-content: center;
+}
+
+.fa-solid {
+    text-align: center;
+    font-size: 2em;
+    color: #0000ff;
+    margin-bottom: 5px;
+}
+
+.foot h2 {
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+}
+
+.foot p {
+    text-align: center;
+    margin: 0;
+    color: #9a9a9a;
+}
+
+.foot p .p-f {
+    text-align: end;
+}
