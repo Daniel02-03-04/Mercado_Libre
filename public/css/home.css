@@ -43,6 +43,10 @@ header{
     color: #fff;
 }
 
+main {
+    width: 90%;
+}
+
 footer {
     display: flex;
     flex-wrap: wrap;
