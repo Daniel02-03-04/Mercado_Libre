@@ -2,8 +2,10 @@ html,
 body{
     background-color: #ebebeb;
     box-shadow: 0px 0px 10px #646464;
+    box-sizing: content-box;
     font-family: "Roboto";
     font-size: 12px;
+    width: 100%;
 }
 
 *{
@@ -12,18 +14,43 @@ body{
     box-sizing: border-box;
 }
 
+h2{
+    text-align: start;
+    color: #646464;
+    font-weight: 800;
+    margin: 10px 0px;
+}
+
 header{
     background-color: #eac926;
     padding: 12px;
 }
 
-.logo {
-    flex-basis: 50%;
+.top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-bottom: 10px;
 }
 
-.fa-search {
-    flex-basis: 50%;
+.logo {
+    width: 30%;
+}
+
+.buscador{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 45%;
+}
+
+.buscador input{
+    border: #fff;
+    width: 80%;
+}
+
+.buscador button{
+    border: #fff;
 }
 
 .text-center {
@@ -42,12 +69,17 @@ header{
     display: none;
 }
 
+#ml-main-nav a {
+    text-decoration: none;
+    color: #000;
+}
+
 .burger-menu{
     text-align: center;
     font-size: 24px;
     width: 40px;
     padding: 8px;
-    margin: 0 auto;
+    margin: 10px auto;
     border-radius: 5px;
     background-color: #0000ff;
 }
@@ -57,9 +89,20 @@ header{
 }
 
 main {
-    width: 90%;
+    justify-content: center;
     text-align: center;
     margin: auto;
+}
+
+section{
+    width: 90%;
+    margin: auto;
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .product{
@@ -71,16 +114,28 @@ main {
 .product-description{
     display: flex;
     flex-direction: column;
-    margin: 15px;
+    margin: 30px 15px 15px 15px;
     align-items: start;
+    position: relative;
 }
-
-.fa-truck {
+.product-description > .fa-truck{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
     width: 30px;
     height: 30px;
+    border: 1px solid #39b54a;
     color: #39b54a;
-    border: solid #39b54a 1px;
+    background-color: #FFF;
     border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -30px;
+}
+
+.text-price, .text-discount{
+    display: inline-block;
+    position: relative
 }
 
 .text-price {
@@ -88,12 +143,13 @@ main {
 }
 
 .text-discount {
+    flex-direction: column;
     font-size: 12px;
     color: #39b54a;
 }
 
 .text-desc{
-    display: none;
+    display: block;
     color: #9a9a9a;
 }
 
@@ -136,27 +192,63 @@ footer {
 
 @media (min-width: 361px) {
 
+    .cabeza{
+        display: flex;
+        justify-content: space-around;
+    }
+    .top{
+        width: 66%;
+        margin-bottom: 20px;
+    }
+    .text-center{
+        width: 33%;
+    }
+    #ml-main-nav{
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 20px;
+    }
     #ml-main-nav ul {
-        display: block;
+        display: flex;
+        gap: 15px;
         list-style-type: none;
         padding-left: 0;
     }
-    #ml-main-nav a {
-        text-decoration: none;
-        color: #000;
+    .tarjetas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     .burger-menu{
         display: none;
     }
     .product{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 40%;
     }
     .text-desc{
         display: block;
         margin-top: 15px;
     }
+    footer{
+        margin-top: 30px;
+    }
 }
 
 @media (min-width: 769px) {
-
+    .product{
+        width: 22%;
+    }
+    .tarjetas{
+        flex-wrap: nowrap;
+    }
+    .pie{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .foot{
+        width: 25%;
+    }
 }
